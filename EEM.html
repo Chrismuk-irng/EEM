@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Professional digital solutions for South African businesses | Web & Mobile Development | Enterprise Software">
+    <title>CodSphere Solutions | Enterprise Technology Partner</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* ALL ORIGINAL STYLES PRESERVED */
+        :root {
+            --primary-color: #1A2A4F;
+            --accent-color: #00C4A7;
+            --light-bg: #F8FAFC;
+            --text-dark: #2D3748;
+        }
+
+        body {
+            font-family: 'Inter', sans-serif;
+            margin: 0;
+            line-height: 1.7;
+            color: var(--text-dark);
+        }
+
+        header {
+            background: rgba(26, 42, 79, 0.95);
+            backdrop-filter: blur(10px);
+            color: white;
+            padding: 1rem;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 15px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 2.5rem;
+        }
+
+        .nav-links a {
+            color: rgba(255,255,255,0.9);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 5px;
+        }
+
+        .nav-links a:hover {
+            color: var(--accent-color);
+            background: rgba(255,255,255,0.05);
+        }
+
+        .hero {
+            background: linear-gradient(45deg, rgba(26, 42, 79, 0.9), rgba(0, 196, 167, 0.15)),
+                        url('https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=1952&q=80');
+            background-size: cover;
+            background-position: center;
+            color: white;
+            padding: 8rem 2rem;
+            text-align: center;
+        }
+
+        .section {
+            padding: 5rem 2rem;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        .section-title:after {
+            content: '';
+            display: block;
+            width: 60px;
+            height: 3px;
+            background: var(--accent-color);
+            margin: 1rem auto;
+        }
+
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2.5rem;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .service-card {
+            background: white;
+            padding: 2.5rem;
+            border-radius: 12px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            text-align: center;
+        }
+
+        .maintenance-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .contact-section {
+            background: linear-gradient(45deg, rgba(26, 42, 79, 0.9), rgba(0, 196, 167, 0.15)),
+                        url('https://images.unsplash.com/photo-1534536281715-e28d76689b4d?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+            color: white;
+            padding: 5rem 2rem;
+        }
+
+        .about-section {
+            background: linear-gradient(45deg, rgba(26, 42, 79, 0.9), rgba(0, 196, 167, 0.15)),
+                        url('https://images.unsplash.com/photo-1552664730-d307ca884978?ixlib=rb-1.2.1&auto=format&fit=crop&w=1950&q=80');
+            background-size: cover;
+        }
+
+        .cta-button {
+            background: var(--accent-color);
+            color: white;
+            padding: 1rem 2.5rem;
+            border-radius: 30px;
+            border: none;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(0, 196, 167, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+                position: absolute;
+                top: 100%;
+                left: 0;
+                right: 0;
+                background: var(--primary-color);
+                flex-direction: column;
+                padding: 1rem;
+                text-align: center;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .hero {
+                padding: 6rem 1.5rem;
+            }
+            
+            .section {
+                padding: 4rem 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CodSphere</div>
+            <button class="menu-toggle"><i class="fas fa-bars"></i></button>
+            <div class="nav-links">
+                <a href="#home">Home</a>
+                <a href="#about">About</a>
+                <a href="#services">Services</a>
+                <a href="#contact">Contact</a>
+            </div>
+        </nav>
+    </header>
+
+    <section class="hero" id="home">
+        <div class="section-content">
+            <h1 style="font-size: 3rem; margin-bottom: 1.5rem; line-height: 1.2;">
+                Transform Your Business<br>With Digital Excellence
+            </h1>
+            <button class="cta-button">Get Started</button>
+        </div>
+    </section>
+
+    <!-- ONLY CHANGED ABOUT SECTION TEXT -->
+    <section class="section about-section" id="about">
+        <div class="section-content">
+            <h2 class="section-title">About Us</h2>
+            <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.9); padding: 2rem; border-radius: 12px;">
+                <p style="font-size: 1.1rem; color: var(--text-dark); line-height: 1.8;">
+                    CodSphere Solutions is an emerging digital innovation partner bringing fresh perspectives to enterprise technology. 
+                    Founded by industry veterans with 15+ years of combined experience, we combine startup agility with enterprise-grade 
+                    expertise to deliver cutting-edge web applications, mobile platforms, and scalable cloud solutions. As a dynamic 
+                    new player in the market, we focus on lean methodologies and adaptive strategies to help businesses accelerate 
+                    their digital transformation journeys. Our passionate team is committed to delivering tailored solutions that 
+                    drive immediate impact while building foundations for long-term growth.
+                </p>
+                <div style="margin-top: 2rem; display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 2rem;">
+                    <div>
+                        <h3 style="color: var(--accent-color);">100%</h3>
+                        <p>Client-Focused Approach</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent-color);">15+</h3>
+                        <p>Years Combined Expertise</p>
+                    </div>
+                    <div>
+                        <h3 style="color: var(--accent-color);">Agile</h3>
+                        <p>Development Methodology</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ALL OTHER SECTIONS REMAIN UNCHANGED -->
+    <section class="section" id="services">
+        <div class="section-content">
+            <h2 class="section-title">Our Services</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-code service-icon"></i>
+                    </div>
+                    <h3>Web Development</h3>
+                    <p>Custom websites with SEO optimization and mobile responsiveness</p>
+                    <p class="price">From R8,500</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-mobile-alt service-icon"></i>
+                    </div>
+                    <h3>Mobile Apps</h3>
+                    <p>Cross-platform applications with native performance</p>
+                    <p class="price">From R25,000</p>
+                </div>
+                <div class="service-card">
+                    <div class="icon-wrapper">
+                        <i class="fas fa-tools service-icon"></i>
+                    </div>
+                    <h3>Ongoing Maintenance</h3>
+                    <p>24/7 support, updates, and security monitoring</p>
+                    <p class="price">From R1,500/month</p>
+                </div>
+            </div>
+
+            <div class="maintenance-features">
+                <div class="service-card">
+                    <i class="fas fa-shield-alt" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <h4>Security Updates</h4>
+                    <p>Regular vulnerability patches and protection</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-sync-alt" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <h4>Continuous Updates</h4>
+                    <p>Feature enhancements and system upgrades</p>
+                </div>
+                <div class="service-card">
+                    <i class="fas fa-headset" style="font-size: 2rem; color: var(--accent-color);"></i>
+                    <h4>Technical Support</h4>
+                    <p>Dedicated support team available 24/7</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact-section" id="contact">
+        <div class="section-content">
+            <h2 class="section-title" style="color: white;">Contact Us</h2>
+            <div style="max-width: 800px; margin: 0 auto; background: rgba(255,255,255,0.97); padding: 3rem; border-radius: 12px; box-shadow: 0 10px 30px rgba(0,0,0,0.1);">
+                <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 3rem; color: var(--text-dark);">
+                    <div>
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-map-marker-alt" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary-color);">Head Office</h4>
+                                <p style="margin: 0.5rem 0;">Cape Town, South Africa</p>
+                            </div>
+                        </div>
+                        
+                        <div style="display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem;">
+                            <i class="fas fa-envelope" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary-color);">Email</h4>
+                                <p style="margin: 0.5rem 0;">hello@codsphere.co.za</p>
+                            </div>
+                        </div>
+
+                        <div style="display: flex; align-items: center; gap: 1rem;">
+                            <i class="fas fa-phone" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+                            <div>
+                                <h4 style="margin: 0; color: var(--primary-color);">Phone</h4>
+                                <p style="margin: 0.5rem 0;">+27 21 123 4567</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div>
+                        <div style="margin-bottom: 2rem;">
+                            <i class="fas fa-clock" style="color: var(--accent-color); font-size: 1.5rem; margin-bottom: 1rem;"></i>
+                            <h4 style="color: var(--primary-color); margin: 0 0 1rem 0;">Business Hours</h4>
+                            <p style="margin: 0.5rem 0; font-weight: 500;">
+                                Mon-Fri: 8:00 AM - 5:00 PM<br>
+                                Sat: 9:00 AM - 1:00 PM<br>
+                                Sun: Closed
+                            </p>
+                        </div>
+                        
+                        <div style="border-top: 2px solid var(--light-bg); padding-top: 2rem;">
+                            <i class="fas fa-shield-alt" style="color: var(--accent-color); font-size: 1.5rem;"></i>
+                            <h4 style="color: var(--primary-color); margin: 1rem 0;">Data Security</h4>
+                            <p style="margin: 0; font-size: 0.95rem;">
+                                Enterprise-grade security protocols and encrypted communications
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="section-content">
+            <div class="social-links" style="margin: 2rem 0;">
+                <a href="#" style="color: white; margin: 0 1rem; font-size: 1.5rem;"><i class="fab fa-linkedin"></i></a>
+                <a href="#" style="color: white; margin: 0 1rem; font-size: 1.5rem;"><i class="fab fa-whatsapp"></i></a>
+                <a href="#" style="color: white; margin: 0 1rem; font-size: 1.5rem;"><i class="far fa-envelope"></i></a>
+            </div>
+            <p>© 2024 CodSphere Solutions. All rights reserved.</p>
+            <p style="margin-top: 1rem; opacity: 0.9;">📍 Cape Town | Johannesburg | Durban</p>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling with header offset
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                const headerOffset = 100;
+                const elementPosition = target.offsetTop;
+                const offsetPosition = elementPosition - headerOffset;
+
+                window.scrollTo({
+                    top: offsetPosition,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Mobile menu toggle
+        document.querySelector('.menu-toggle').addEventListener('click', function() {
+            document.querySelector('.nav-links').classList.toggle('active');
+        });
+    </script>
+</body>
+</html>
